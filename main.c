@@ -206,13 +206,13 @@ void Subdecrypt() {
     read_line(code,26);
     printf("Collected String: '%s'\n",code);
 
-        int length = strlen(message);                                       // Length of message amd and how much im going to itterate, in this case character buy character
-        char *decrypted_message = (char *) malloc(sizeof(char)*length);     // Allocate space
+        int length = strlen(message);                                       	// Length of message amd and how much im going to itterate, in this case character buy character
+        char *decrypted_message = (char *) malloc(sizeof(char)*length);     	// Allocate space
 
             for(int i = 0; i <length; i++){
-            int decryption_index = toupper(message[i]) - 'A';
-            if(decryption_index >= 0 && decryption_index < 26){
-            int code_index = find_index(code,toupper(message[i]));
+            int decryption_index = toupper(message[i]) - 'A';			// Makes each letter upper case, checks to see if
+            if(decryption_index >= 0 && decryption_index < 26){			// each letter is between A and Z and if sends the letter to the find index prototyoe
+            int code_index = find_index(code,toupper(message[i]));		// which pairs each codeletter with the paired letter from the alphabet.
              decrypted_message[i] = 'A' + code_index;
             }else {
              decrypted_message[i] = message[i];
