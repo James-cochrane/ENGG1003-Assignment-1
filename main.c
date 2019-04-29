@@ -1,3 +1,9 @@
+/*	ENGG1003 Assignment 1
+	James Cochrane
+	C3206223	
+	Due: 29/04/19 
+	This program requires the user to manually type input when asked by program.	*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
